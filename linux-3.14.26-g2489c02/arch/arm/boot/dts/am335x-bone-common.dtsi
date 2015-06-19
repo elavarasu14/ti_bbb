@@ -93,6 +93,16 @@
 			0x18c (PIN_INPUT_PULLUP | MUX_MODE0)	/* i2c0_scl.i2c0_scl */
 		>;
 	};
+        /* elavarasu: pin mux for the i2c
+	 * pinctrl-single was calculated based on the pin mux base pinmux@44e10800 
+	 * adding with the conf_uart1_rxd and conf_uart2_txd 
+	 */
+	i2c1_pins: pinmux_i2c1_pins {
+		pinctrl-single,pins = <
+			0x180 (PIN_INPUT_PULLUP | MUX_MODE3)	/* i2c0_sda.i2c0_sda */
+			0x184 (PIN_INPUT_PULLUP | MUX_MODE3)	/* i2c0_scl.i2c0_scl */
+		>;
+	};
 
 	uart0_pins: pinmux_uart0_pins {
 		pinctrl-single,pins = <
